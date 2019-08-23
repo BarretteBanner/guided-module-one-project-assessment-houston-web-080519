@@ -55,7 +55,7 @@ def gotrain
             print "."
             sleep(0.5)
         end
-        prompt.say("#{$user.trainer_name}: Jeez I'm kidding!")
+        prompt.say("\n#{$user.trainer_name}: Jeez I'm kidding!")
         prompt.ok(">> Enter")
         gets
         prompt.say("#{$user.trainer_name}: Here are your workouts - #{array_of_level_3_workouts}")

@@ -1,7 +1,9 @@
 require 'pry'
 def realfightinfo
     puts `clear`
+    puts "current health BEFORE#{$health}"
     $health *= $user.level
+    puts "current health #{$health}"
     prompt = TTY::Prompt.new(active_color: :blue)
     Opponent.all.select do |opponent|
         if $user.level == opponent.level
@@ -79,7 +81,7 @@ def opponentinfo
     sleep(0.75)
     choosefight = prompt.select("Ready To Start", ["Back"])
     if choosefight == "Back"
-        realfightinfo
+        choosemoves
     end
 end
 
